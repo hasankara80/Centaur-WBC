@@ -123,6 +123,53 @@ visible in the simulation.
 > Physics randomisation provides a useful robustness test in simulation, but
 > it does not constitute evidence of successful sim-to-real transfer.
 
+## 🚀 Quickstart Guide
+
+### 1. Install Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 2. View the Scripted Whole-Body Motion
+
+```bash
+mjpython view_centaur.py
+```
+
+### 3. Generate the Expert Dataset
+
+```bash
+python generate_loco_data.py
+```
+
+This generates 30,000 state-action samples and saves them to:
+
+```text
+dataset/centaur_expert_data.npz
+```
+
+### 4. Train the Behaviour-Cloning Policy
+
+```bash
+python train_wbc_policy.py
+```
+
+The trained weights are saved to:
+
+```text
+models/wbc_policy.pth
+```
+
+### 5. Run Closed-Loop Evaluation
+
+```bash
+mjpython evaluate_ml_centaur.py
+```
+
+The evaluation varies the target Y position, floor friction, and torso mass.
+``
+
 ## 📊 Current Implementation
 
 | Component | Configuration |
