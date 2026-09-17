@@ -2,9 +2,12 @@
 An end-to-end Imitation Learning pipeline demonstrating Whole-Body Control (WBC) for an arm-equipped quadruped. Built in MuJoCo and PyTorch, this project coordinates base, torso, and manipulator motion as a single dynamic system to execute stable reaching tasks across unstructured physical parameters.
 
 ## 🎬 Sim-to-Real Deployment Demo
-(Drag and drop your Screen Recording 2026-09-17 at 09.50.48.mov side-by-side video here!)
 
-Note on the visualizer: The floor dynamically changes color from light blue (icy/low friction) to dark gray (asphalt/high friction) to visualize the real-time Domain Randomization engine operating under the hood.
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/459d3ac7-b3bb-4ba7-a425-b3ceda3856c5" width="80%" autoplay loop muted playsinline></video>
+</div>
+
 
 ## 🧠 System Architecture
 This repository is structured as a 3-stage Imitation Learning pipeline, transitioning from hardcoded kinematic stabilization to closed-loop neural policy inference.
